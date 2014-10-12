@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
     <div>
     
-    Daniel's Mortgage Calculator
+    <h1>Daniel's Mortgage Calculator</h1>
         
         <br /><br />
      
@@ -36,21 +36,23 @@
         <asp:Button ID="btnCalcPmt" runat="server" Text="Calculate" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnClear" runat="server" Text="Clear" Width="101px" />
-        <br />
+        <br /><br />
         <% If Not IsPostBack Then%>
         
         <p> Welcome to my mortgage calculator. Please complete the fields above to have your monthly payment and loan repayment schedule calculated for you.</p>
         
-        <% Else%>
-        <br /><br />
+      <% Else%>
                 
-        Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
+       Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server" CssClass="h2"></asp:Label>
+        <br />
         
         <br /><br />
         
-        <asp:GridView ID="loanGridView" runat="server" />
-         
-        <%End If%>   
+        <asp:GridView ID="loanGridView" runat="server" CssClass="cssgridview" AlternatingRowStyle-CssClass="alt" />
+        
+          
+            <%End If%> 
+       
         </div>
     </form>
 </body>
